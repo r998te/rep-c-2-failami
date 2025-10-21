@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Кнопка</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="knopka">
+        <input type="text" v-model="name" placeholder="ТЫК">
+        <button @click="displayName">Клик</button>
+    </div>
+
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    name: ''  
+                }
+            },
+            methods: {
+                displayName() {
+                    alert(this.name);  
+                }
+            }
+        }).mount('#knopka');
+    </script>
+</body>
+</html>
